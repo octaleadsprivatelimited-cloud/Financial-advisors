@@ -7,13 +7,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0f766e',
-        secondary: '#0ea5e9',
-        accent: '#f59e0b',
-        dark: '#0b1220',
+        primary: {
+          DEFAULT: '#0d3a35', // Premium Deep Forest Teal
+          light: '#1e544f',
+          dark: '#072421',
+        },
+        secondary: {
+          DEFAULT: '#c5a880', // Elegant Muted Gold / Champagne
+          light: '#d4bd9c',
+          dark: '#a6875d',
+        },
+        accent: '#b8966c',
+        dark: '#0f1816', // Dark rich green-black
+        cream: '#faf8f5', // Warm luxury background color
+        charcoal: '#333e3c',
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'ui-serif', 'serif'],
       },
     },
   },

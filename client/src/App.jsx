@@ -1,5 +1,6 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
@@ -23,14 +24,21 @@ import Business from './pages/landing/Business.jsx'
 import Risk from './pages/landing/Risk.jsx'
 import Mortgage from './pages/landing/Mortgage.jsx'
 import Advisory from './pages/landing/Advisory.jsx'
+import AdminLogin from './pages/AdminLogin.jsx'
+import AdminDashboard from './pages/AdminDashboard.jsx'
+import DynamicPage from './pages/DynamicPage.jsx'
 
 export default function App() {
+  const location = useLocation()
+  const isAdmin = location.pathname.startsWith('/admin')
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900">
       <Helmet>
         <title>Financial advisors | Modern Financial Planning & Wealth Management</title>
       </Helmet>
-      <Header />
+      <ScrollToTop />
+      {!isAdmin && <Header />}
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -54,9 +62,12 @@ export default function App() {
           <Route path="/risk" element={<Risk />} />
           <Route path="/mortgage" element={<Mortgage />} />
           <Route path="/advisory" element={<Advisory />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/p/:slug" element={<DynamicPage />} />
         </Routes>
       </main>
-      <Footer />
+      {!isAdmin && <Footer />}
     </div>
   )
 }

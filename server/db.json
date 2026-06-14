@@ -1,0 +1,254 @@
+{
+  "inquiries": [
+    {
+      "id": "inq_1",
+      "name": "Rajesh Mehta",
+      "email": "rajesh.mehta@techpromoters.in",
+      "phone": "+91 98200 12345",
+      "message": "Hi, we are looking for a complete tax audit for our HUF partition. We also want to optimize our startup ESOP tax structure before our next dilution round. Investible Net Worth: ₹10 Cr - ₹25 Cr.",
+      "date": "2026-06-13T14:20:00.000Z",
+      "status": "new"
+    },
+    {
+      "id": "inq_2",
+      "name": "Ananya Sen",
+      "email": "ananya.sen@globalexec.org",
+      "phone": "+1 415 555 0199",
+      "message": "I am an NRI based in San Francisco. Need guidance on repatriation of NRO funds, DTAA credits, and PFIC tax compliance for mutual funds. Investible Net Worth: ₹5 Cr - ₹10 Cr.",
+      "date": "2026-06-12T09:15:30.000Z",
+      "status": "in-progress"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq_1",
+      "q": "What exactly is a Personal CFO?",
+      "a": "A Personal CFO is a comprehensive coordinator for your entire financial life. Instead of managing your investments in isolation, a Personal CFO integrates your tax returns, corporate ESOPs, estate planning, HUFs, and private trusts into a unified strategy."
+    },
+    {
+      "id": "faq_2",
+      "q": "How does your fee-only structure work?",
+      "a": "We are SEBI Registered Investment Advisers operating under a strict flat-fee retainer model. We receive 0% commission from mutual fund companies, insurers, or PMS houses. This completely aligns our success with your net worth growth and keeps advice conflict-free."
+    },
+    {
+      "id": "faq_3",
+      "q": "What is your typical client profile?",
+      "a": "Our clients are typically Indian business owners, startup founders with ESOP liquidity, corporate executives, and NRI families. We generally recommend that clients have at least ₹5 Crores in investable assets or ₹10 Crores in aggregate balance sheet value to justify our retainer pricing."
+    },
+    {
+      "id": "faq_4",
+      "q": "Do you manage US-India double taxation for NRIs?",
+      "a": "Yes. We coordinate with tax preparers in both jurisdictions. We audit mutual funds for PFIC compliance, structure accounts to optimize DTAA tax credits, and manage Liberalised Remittance Scheme (LRS) transfers."
+    },
+    {
+      "id": "faq_5",
+      "q": "How do you coordinate with our family CA?",
+      "a": "We do not replace your family CA. Instead, we act as your Personal CFO—designing the tax-saving strategies, HUF partitions, and trust structures, and providing clean quarterly summaries so your CA can file your returns friction-free."
+    }
+  ],
+  "careers": [
+    {
+      "id": "car_1",
+      "title": "Lead Personal CFO / Wealth Advisor",
+      "type": "Full-time",
+      "location": "Mumbai (Nariman Point)",
+      "desc": "Manage high-net-worth client accounts. Design financial roadmaps and asset allocation strategies. CFP or CFA preferred, with 5+ years of wealth management experience."
+    },
+    {
+      "id": "car_2",
+      "title": "Tax & Structuring Associate (CA)",
+      "type": "Full-time",
+      "location": "Bengaluru / Hybrid",
+      "desc": "Audit client balance sheets for tax leaks. Assist in establishing private trusts, HUF structures, and managing ESOP taxation schedules. Chartered Accountant required."
+    }
+  ],
+  "settings": {
+    "phone": "+91 22 6901 2200",
+    "email": "advisory@fortuneadvisor.in",
+    "whatsapp": "+912269012200",
+    "address": "Level 11, Maker Chambers IV, Nariman Point, Mumbai, Maharashtra 400021"
+  },
+  "pages": [
+    {
+      "id": "page_1",
+      "slug": "custom-wealth-advisory",
+      "title": "Custom Wealth Advisory",
+      "template": "service-landing",
+      "seoTitle": "Custom Wealth Advisory | Fortune Personal CFO",
+      "seoDesc": "Optimize your wealth with our bespoke, commission-free fiduciary advisory.",
+      "seoKeywords": "wealth advisory, commission-free, financial plan",
+      "sections": {
+        "heroTitle": "Bespoke Wealth Advisory for Elite Families",
+        "heroSub": "Integrated tax, investment, and estate strategies designed strictly under a fiduciary mandate.",
+        "bodyText": "Our advisory desk acts as your complete personal CFO team. We work with your existing legal counsel and family CAs to execute cohesive asset allocation strategies, review private equity and venture capital opportunities, and monitor risk indicators.",
+        "feature1Title": "Zero Commission Drag",
+        "feature1Desc": "100% direct mutual funds, keeping conflicts of interest at zero.",
+        "feature2Title": "Tax-Smart Harvesting",
+        "feature2Desc": "Harvest capital gains tax-efficiently and structure private trusts.",
+        "ctaText": "Book a Consultation",
+        "ctaLink": "/contact"
+      }
+    },
+    {
+      "id": "page_1781419394681",
+      "slug": "tax-minimization",
+      "title": "Executive Tax Minimization",
+      "template": "service-landing",
+      "seoTitle": "Sovereign Tax Planning | Fortune CFO",
+      "seoDesc": "Advanced tax restructuring strategies for corporate promoters.",
+      "seoKeywords": "",
+      "sections": {
+        "heroTitle": "Custom Promoter Tax Advisory",
+        "heroSub": "Conflict-free fiduciary advice.",
+        "bodyText": "We structure family trusts and partitions to keep capital growing.",
+        "feature1Title": "",
+        "feature1Desc": "",
+        "feature2Title": "",
+        "feature2Desc": "",
+        "ctaText": "Book a Consultation",
+        "ctaLink": "/contact",
+        "aboutTitle": "",
+        "aboutSub": "",
+        "philosophyText": "",
+        "caseTitle": "",
+        "caseOutcome": "",
+        "caseProfile": "",
+        "caseChallenge": "",
+        "caseStrategy": "",
+        "subtitle": "",
+        "bodyContent": ""
+      }
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal_1781419433665",
+      "title": "Mumbai Financial Center HQ",
+      "url": "https://www.commercialdesignindia.com/wp-content/uploads/2021/04/1-11.jpg",
+      "category": "Office",
+      "date": "2026-06-14T06:43:53.665Z"
+    },
+    {
+      "id": "gal_1",
+      "title": "Corporate HQ Meeting Room",
+      "url": "https://www.brightonjones.com/wp-content/uploads/2022/10/GettyImages-1171145872.jpg",
+      "category": "Office",
+      "date": "2026-06-14T06:30:00.000Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv_1",
+      "title": "Personal Financial Planning",
+      "desc": "Bespoke cash flow, savings roadmap, and milestone targets aligned with your personal and family values.",
+      "items": [
+        "Budgeting and expense management",
+        "Goal-based planning (house, education, retirement)",
+        "Emergency fund planning"
+      ],
+      "icon": "📋",
+      "img": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600",
+      "active": true,
+      "path": "/planning"
+    },
+    {
+      "id": "srv_2",
+      "title": "Investment Advisory",
+      "desc": "Portfolio creation and management incorporating stocks, mutual funds, ETFs, and bonds with risk-based asset allocation.",
+      "items": [
+        "Stock, mutual fund, ETF, and bond investments",
+        "Portfolio creation and management",
+        "Risk assessment and asset allocation"
+      ],
+      "icon": "📈",
+      "img": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=600",
+      "active": true,
+      "path": "/wealth"
+    },
+    {
+      "id": "srv_3",
+      "title": "Retirement Planning",
+      "desc": "Structured retirement drawdown plans managing pension, EPF, NPS, and tax-efficient withdrawal strategies.",
+      "items": [
+        "Pension and retirement corpus planning",
+        "Retirement income strategies",
+        "Tax-efficient withdrawals"
+      ],
+      "icon": "⏳",
+      "img": "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=600",
+      "active": true,
+      "path": "/retirement"
+    },
+    {
+      "id": "srv_4",
+      "title": "Tax Planning",
+      "desc": "Direct tax optimization integrated with investments, minimizing LTCG, and structuring capital gains tax efficiently.",
+      "items": [
+        "Income tax optimization",
+        "Tax-saving investments",
+        "Capital gains tax planning"
+      ],
+      "icon": "⚖️",
+      "img": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=600",
+      "active": true,
+      "path": "/tax"
+    },
+    {
+      "id": "srv_5",
+      "title": "Insurance Planning",
+      "desc": "Independent risk auditing and coverage recommendations for life, health, and risk protection strategies.",
+      "items": [
+        "Life insurance analysis",
+        "Health insurance recommendations",
+        "Risk protection strategies"
+      ],
+      "icon": "🛡️",
+      "img": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=600",
+      "active": true,
+      "path": "/insurance"
+    },
+    {
+      "id": "srv_6",
+      "title": "Wealth Management",
+      "desc": "High-net-worth portfolio management, estate and succession planning, and family wealth preservation.",
+      "items": [
+        "High-net-worth portfolio management",
+        "Estate and succession planning",
+        "Family wealth preservation"
+      ],
+      "icon": "💎",
+      "img": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=600",
+      "active": true,
+      "path": "/estate"
+    },
+    {
+      "id": "srv_7",
+      "title": "Business Financial Advisory",
+      "desc": "Promoter dilution management, corporate cash flow management, budgeting, and fundraising planning.",
+      "items": [
+        "Cash flow management",
+        "Business budgeting",
+        "Fundraising and investment planning",
+        "Financial projections"
+      ],
+      "icon": "🏢",
+      "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600",
+      "active": true,
+      "path": "/business"
+    },
+    {
+      "id": "srv_8",
+      "title": "Loan & Debt Advisory",
+      "desc": "Guidance on home loans, business loan assistance, debt restructuring, and repayment planning.",
+      "items": [
+        "Home loan guidance",
+        "Business loan assistance",
+        "Debt restructuring and repayment planning"
+      ],
+      "icon": "💸",
+      "img": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600",
+      "active": true,
+      "path": "/planning"
+    }
+  ]
+}

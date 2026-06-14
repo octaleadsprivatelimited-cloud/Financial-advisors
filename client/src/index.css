@@ -2,17 +2,545 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Futura PT';
+  src: local('Plus Jakarta Sans'), local('Inter'), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: local('Plus Jakarta Sans Bold'), local('Inter Bold'), sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LeMondeLivre';
+  src: local('Playfair Display'), local('Georgia'), serif;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LeMondeLivre';
+  src: local('Playfair Display Bold'), local('Georgia Bold'), serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   color-scheme: light;
 }
 
-/* Reusable component styles */
-.btn-primary {
-  @apply inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-white font-medium shadow hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', 'Futura PT', sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Section Spacing Overrides to match compact corporate financial layouts */
+.py-16, .py-20, .py-24, .py-28, .py-32 {
+  padding-top: 2.25rem !important;
+  padding-bottom: 2.25rem !important;
+}
+.py-12 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.sm\:py-24, .sm\:py-20, .sm\:py-16 {
+  padding-top: 2.75rem !important;
+  padding-bottom: 2.75rem !important;
+}
+.lg\:py-32, .lg\:py-24 {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
+
+/* Alternating layout backgrounds */
+.bg-color-grey, .bg-\[\#fff6eb\], .bg-\[\#fff6eb\]\/10, .bg-\[\#fff6eb\]\/20 {
+  background-color: #ffffff !important;
+}
+
+.banner-centered, .block-zig-zag, .block-contact-form, .image_card {
+  background-color: #ffffff !important;
+}
+
+.block-how-can-we-help, .bg-\[\#e9ecec\], #footer .footer-top {
+  background-color: #f8fafc !important; /* Cool clean light gray */
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+#footer {
+  border-top: 2px solid #0f172a !important;
+  background-color: #0b1329 !important;
+}
+
+#footer .footer-top {
+  background-color: #0b1329 !important;
+  border: none !important;
+}
+
+#footer .footer-top h4, 
+#footer .footer-top h5, 
+#footer .footer-top a, 
+#footer .footer-top p {
+  color: #f8fafc !important;
+}
+
+#footer .footer-top a:hover {
+  color: #af8d4f !important;
+}
+
+/* Color inheritance for light text on dark backgrounds */
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+.text-white p, .text-white li, .text-white a, .text-white span,
+.text-gray-100 h1, .text-gray-100 h2, .text-gray-100 h3, .text-gray-100 p,
+.text-gray-200 h1, .text-gray-200 h2, .text-gray-200 h3, .text-gray-200 p,
+.text-gray-300 h1, .text-gray-300 h2, .text-gray-300 h3, .text-gray-300 p,
+.text-slate-100 h1, .text-slate-100 h2, .text-slate-100 h3, .text-slate-100 p,
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6,
+.bg-dark p, .bg-dark li, .bg-dark a,
+.bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6,
+.bg-primary p, .bg-primary li, .bg-primary a,
+.bg-\[\#315355\] h1, .bg-\[\#315355\] h2, .bg-\[\#315355\] h3, .bg-\[\#315355\] p, .bg-\[\#315355\] a {
+  color: inherit !important;
+}
+
+/* Compact Typography & Font Sizes */
+body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body h5, body .h5, body h6, body .h6, body .font-serif, body .main-title-tag, body .main-block-tag {
+  font-family: 'LeMondeLivre', 'Playfair Display', serif;
+  letter-spacing: -0.015em;
+}
+
+body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body h5, body .h5, body h6, body .h6 {
+  font-weight: 700;
+  color: #0f172a; /* Premium Slate/Navy */
+}
+
+body h1, body .h1 {
+  font-size: 34px;
+  line-height: 42px;
+}
+
+body h2, body .h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+body h3, body .h3 {
+  font-size: 19px;
+  line-height: 25px;
+}
+
+body h4, body .h4 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+body h5, body .h5 {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+}
+
+body p, body .block-text, body .description, body li {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 20px;
+  color: #475569; /* Modern clean slate dark-gray */
+  font-weight: 400;
+}
+
+/* Alternate row images size limit */
+.block-zig-zag img {
+  max-width: 250px !important;
+  border-radius: 2px !important;
+}
+
+/* Compact Info Card Styles for Help category */
+.block-how-can-we-help .col {
+  padding: 1.25rem !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0px !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.2s ease !important;
+}
+
+.block-how-can-we-help .col:hover {
+  border-color: #0c2340 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.block-how-can-we-help .col h4 {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.block-how-can-we-help .col ul li {
+  margin-bottom: 0.35rem !important;
+}
+
+.block-how-can-we-help .col ul li a {
+  font-size: 12.5px !important;
+  color: #475569 !important;
+  font-weight: 500 !important;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+}
+
+.block-how-can-we-help .col ul li a:hover {
+  color: #af8d4f !important;
+  text-decoration: underline !important;
+}
+
+/* Compact Form Styling */
+.formHolder {
+  padding: 1.5rem !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+  background-color: #ffffff !important;
+}
+
+.formHolder input[type=text],
+.formHolder input[type=email],
+.formHolder input[type=tel],
+.formHolder select,
+.formHolder textarea {
+  font-size: 13px !important;
+  padding: 6px 10px !important;
+  border-radius: 0px !important;
+  border: 1px solid #cbd5e1 !important;
+  height: auto !important;
+}
+
+.formHolder label {
+  font-size: 12.5px !important;
+  margin-bottom: 2px !important;
+  color: #334155 !important;
+}
+
+.formHolder .row {
+  margin-bottom: 0.75rem !important;
+}
+
+.formHolder .col-md-6 {
+  margin-bottom: 0.75rem !important;
+}
+
+/* Button Overrides to fit JPMorgan/Goldman Navy & Gold theme */
+/* Button Overrides to fit Navy & Gold theme with resounding hover and scale animations */
+.button, .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c2340 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  padding: 10px 22px !important;
+  border-radius: 2px !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border: 1px solid #0c2340 !important;
+  box-shadow: 0 2px 4px rgba(12, 35, 64, 0.08) !important;
+}
+
+.button:hover, .btn-primary:hover {
+  background-color: #af8d4f !important;
+  border-color: #af8d4f !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  transform: translateY(-2px) scale(1.025) !important;
+  box-shadow: 0 8px 16px rgba(175, 141, 79, 0.25) !important;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+  color: #0c2340 !important;
+  border: 1px solid #0c2340 !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  padding: 10px 22px !important;
+  border-radius: 2px !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 4px rgba(12, 35, 64, 0.04) !important;
+}
+
+.btn-secondary:hover {
+  background-color: #0c2340 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  transform: translateY(-2px) scale(1.025) !important;
+  box-shadow: 0 8px 16px rgba(12, 35, 64, 0.15) !important;
+}
+
+/* Resounding Hover Lift effect for Cards */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 32px -10px rgba(12, 35, 64, 0.08), 0 4px 16px -6px rgba(197, 160, 84, 0.12) !important;
+  border-color: rgba(197, 160, 84, 0.4) !important;
 }
 
 .container-default {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+/* Override header elements to respect original theme and apply medium sized layout */
+#header .menu a {
+  font-family: 'Futura PT', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  letter-spacing: 0.05em !important;
+  font-weight: 600 !important;
+}
+
+#header .header-col {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+#header .logo-item::after {
+  top: -8px !important;
+  bottom: -8px !important;
+  display: none !important; /* Hide separator line on compact design */
+}
+
+#header .menu>.menu-item {
+  margin-top: -8px !important;
+  margin-bottom: -8px !important;
+  margin-right: 20px !important;
+}
+
+#header .menu-holder-item {
+  padding-left: 24px !important;
+}
+
+#header .menu>.menu-item>a {
+  height: 60px !important;
+}
+
+#header .menu>.menu-button {
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+#header .sub-menu {
+  top: 100% !important;
+  padding: 8px 0 !important;
+}
+
+#header .sub-menu .menu-item {
+  font-size: 13px !important;
+  line-height: 18px !important;
+  margin-bottom: 4px !important;
+  padding: 4px 16px !important;
+}
+
+#header .menu>.menu-button a,
+#header .mobile-menu-outline-button>a {
+  padding: 8px 16px !important;
+  font-size: 12px !important;
+  border-radius: 0px !important;
+}
+
+/* FAQ Accordion button resets to bypass legacy styles */
+button.faq-accordion-btn {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  padding: 1.5rem !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+button.faq-accordion-btn:hover {
+  background-color: #faf8f5 !important;
+  background: #faf8f5 !important;
+  color: #af8d4f !important;
+}
+
+button.faq-accordion-btn span {
+  color: inherit !important;
+}
+
+/* --- Admin Portal Stylesheet Reset & Isolation --- */
+.admin-portal,
+.admin-portal *,
+.admin-portal .font-sans,
+.admin-portal .font-serif,
+.admin-portal button,
+.admin-portal input,
+.admin-portal select,
+.admin-portal textarea,
+.admin-portal a {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Segoe UI Web (West European)', Roboto, 'Helvetica Neue', sans-serif !important;
+}
+
+/* Neutralize global generic tag styles from brighton_jones_app.css */
+.admin-portal button,
+.admin-portal input,
+.admin-portal select,
+.admin-portal textarea,
+.admin-portal a {
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+
+/* 1. Reset buttons so they don't inherit the gold background/hover */
+.admin-portal button,
+.admin-portal .button,
+.admin-portal input[type=submit],
+.admin-portal input[type=button] {
+  background: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* Override global active gold button backgrounds */
+.admin-portal button:not([class*='bg-']) {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.admin-portal button:hover:not([class*='hover:bg-']) {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.admin-portal button:not([class*='text-']) {
+  color: inherit !important;
+}
+
+.admin-portal button:hover:not([class*='hover:text-']) {
+  color: inherit !important;
+}
+
+/* 2. Reset text/password inputs so they don't inherit global input style */
+.admin-portal input[type=text],
+.admin-portal input[type=password],
+.admin-portal input[type=email],
+.admin-portal textarea,
+.admin-portal select {
+  display: block !important;
+  width: 100% !important;
+  color: #0f172a !important; /* slate-900 */
+  font-size: 13.5px !important;
+  line-height: 20px !important;
+  border-radius: 0.375rem !important; /* rounded-md */
+  border: 1px solid #cbd5e1 !important; /* slate-300 */
+  padding: 0.5rem 0.75rem !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+  height: auto !important;
+}
+
+.admin-portal input[type=text]:focus,
+.admin-portal input[type=password]:focus,
+.admin-portal input[type=email]:focus,
+.admin-portal textarea:focus,
+.admin-portal select:focus {
+  border-color: #0078d4 !important; /* Microsoft Blue */
+}
+
+/* 3. Reset links so they don't inherit gold color */
+.admin-portal a:not([class*='text-']) {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.admin-portal a:hover:not([class*='hover:text-']) {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+
+/* 4. Reset spans inside headings to prevent turning gold */
+.admin-portal h1 span,
+.admin-portal h2 span,
+.admin-portal h3 span,
+.admin-portal h4 span,
+.admin-portal h5 span,
+.admin-portal h6 span {
+  color: inherit !important;
+}
+
+/* 5. Override massive heading and default typography sizes from brighton_jones_app.css */
+.admin-portal h1:not([class*='text-']) { font-size: 2rem !important; line-height: 2.25rem !important; }
+.admin-portal h2:not([class*='text-']) { font-size: 1.5rem !important; line-height: 2rem !important; }
+.admin-portal h3:not([class*='text-']) { font-size: 1.25rem !important; line-height: 1.75rem !important; }
+.admin-portal h4:not([class*='text-']) { font-size: 1rem !important; line-height: 1.5rem !important; }
+.admin-portal h5:not([class*='text-']) { font-size: 0.875rem !important; line-height: 1.25rem !important; }
+.admin-portal h6:not([class*='text-']) { font-size: 0.75rem !important; line-height: 1rem !important; }
+
+.admin-portal label:not([class*='text-']) {
+  font-size: 0.75rem !important; /* 12px */
+  line-height: 1rem !important;
+}
+
+.admin-portal button:not([class*='text-']),
+.admin-portal .button:not([class*='text-']) {
+  font-size: 0.75rem !important; /* 12px */
+  line-height: 1rem !important;
+}
+
+.admin-portal a:not([class*='text-']),
+.admin-portal td:not([class*='text-']),
+.admin-portal th:not([class*='text-']),
+.admin-portal p:not([class*='text-']),
+.admin-portal li:not([class*='text-']),
+.admin-portal span:not([class*='text-']) {
+  font-size: 0.8125rem !important; /* 13px */
+  line-height: 1.25rem !important;
 }
 
 
